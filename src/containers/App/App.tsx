@@ -1,25 +1,33 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Switch, Route } from "react-router-dom";
 
-const App = () => {
+//components:
+import Main from "../Main";
+import SideBar from "../SideBar";
+import Navigation from "../../components/Navigation";
+import Homepage from "../../pages/Homepage";
+import MediumClapPage from "../../pages/MediumClapPage";
+
+//styles:
+import { GlobalStyle } from "./GlobalStyle";
+import { AppContainer } from "./style";
+
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <AppContainer>
+        <SideBar>
+          <Navigation />
+        </SideBar>
+        <Main>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path="/medium-clap" component={MediumClapPage} />
+          </Switch>
+        </Main>
+      </AppContainer>
+    </>
   );
 };
 
