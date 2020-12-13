@@ -9,6 +9,9 @@ export const MediumClapContainer = styled.span`
   height: 80px;
   background: none;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:after {
     content: "";
     position: absolute;

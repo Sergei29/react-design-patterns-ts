@@ -11,4 +11,7 @@ export const ClapCountContainer = styled.span`
   height: 40px;
   width: 40px;
   line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
