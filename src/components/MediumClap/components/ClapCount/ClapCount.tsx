@@ -1,7 +1,11 @@
 import React from "react";
-
-const ClapCount = (): JSX.Element => {
-  return <div>ClapCount</div>;
+// style:
+import { ClapCountContainer } from "./style";
+type Props = {
+  count: number;
+};
+const ClapCount = ({ count }: Props): JSX.Element => {
+  return <ClapCountContainer>+{count}</ClapCountContainer>;
 };
 
 export default ClapCount;

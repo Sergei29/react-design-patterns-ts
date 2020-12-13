@@ -1,13 +1,17 @@
 import React from "react";
 import { ClapCount, ClapIcon, ClapTotal } from "./components";
+// styles:
+import { MediumClapContainer } from "./style";
 
 const MediumClap = (): JSX.Element => {
+  const count = 0;
+  const countTotal = 227;
   return (
-    <div>
-      <ClapCount />
+    <MediumClapContainer>
+      <ClapCount count={count} />
       <ClapIcon />
-      <ClapTotal />
-    </div>
+      <ClapTotal countTotal={countTotal} />
+    </MediumClapContainer>
   );
 };
 
